@@ -63,7 +63,7 @@ const Home = () => {
     <>
       <article className="article-header">
         <header>
-          <h1>React: Simple CRUD Application</h1>
+          <h1>Smart Leap App</h1>
         </header>
       </article>
 
