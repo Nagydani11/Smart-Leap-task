@@ -10,7 +10,7 @@ type Props = {
 const AddEmployee = (props: Props) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
+  const [post, setPost] = useState("");
 
   const { onBackBtnClickHnd, onSubmitClickHnd } = props;
 
@@ -22,8 +22,8 @@ const AddEmployee = (props: Props) => {
     setLastName(e.target.value);
   };
 
-  const onEmailChangeHnd = (e: any) => {
-    setEmail(e.target.value);
+  const onPostChangeHnd = (e: any) => {
+    setPost(e.target.value);
   };
 
   const onSubmitBtnClickHnd = (e: any) => {
@@ -32,7 +32,7 @@ const AddEmployee = (props: Props) => {
       id: new Date().toJSON().toString(),
       firstName: firstName,
       lastName: lastName,
-      email: email,
+      post: post,
     };
     onSubmitClickHnd(data);
     onBackBtnClickHnd();
@@ -41,7 +41,7 @@ const AddEmployee = (props: Props) => {
   return (
     <div className="form-container">
       <div>
-        <h3>Add Employee Form</h3>
+        <h3>Add Post Form</h3>
       </div>
       <form onSubmit={onSubmitBtnClickHnd}>
         <div>
@@ -57,12 +57,12 @@ const AddEmployee = (props: Props) => {
           <input type="text" value={lastName} onChange={onLastNameChangeHnd} />
         </div>
         <div>
-          <label>Email Add. : </label>
-          <input type="text" value={email} onChange={onEmailChangeHnd} />
+          <label>Post Add. : </label>
+          <input type="text" value={post} onChange={onPostChangeHnd} />
         </div>
         <div>
           <input type="button" value="Back" onClick={onBackBtnClickHnd} />
-          <input type="submit" value="Add Employee" />
+          <input type="submit" value="Add Post" />
         </div>
       </form>
     </div>

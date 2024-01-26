@@ -35,9 +35,7 @@ const Home = () => {
   };
 
   const deleteEmployee = (data: IEmployee) => {
-    // To Index from array i,e employeeList
-    // Splice that
-    // Update new record
+
 
     const indexToDelete = employeeList.indexOf(data);
     const tempList = [...employeeList];
@@ -72,7 +70,7 @@ const Home = () => {
           <>
             <input
               type="button"
-              value="Add Employee"
+              value="Add Post"
               onClick={onAddEmployeeClickHnd}
               className="add-employee-btn"
             />

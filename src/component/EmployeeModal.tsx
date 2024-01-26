@@ -14,7 +14,7 @@ const EmployeeModal = (props: Props) => {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        <h3>Employee Data</h3>
+        <h3>Post Data</h3>
         <div>
           <div>
             <label>First Name : {data.firstName}</label>
@@ -23,7 +23,7 @@ const EmployeeModal = (props: Props) => {
             <label>Last Name : {data.lastName}</label>
           </div>
           <div>
-            <label>Email Add. : {data.email}</label>
+            <label>Post Add. : {data.post}</label>
           </div>
         </div>
       </div>

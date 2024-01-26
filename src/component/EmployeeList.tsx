@@ -24,19 +24,19 @@ const EmployeeList = (props: Props) => {
   return (
     <div>
       <article>
-        <h3 className="list-header">Employee List</h3>
+        <h3 className="list-header">Blog list</h3>
       </article>
       <table>
         <tr>
           <th>Name</th>
-          <th>Email</th>
+          <th>Post</th>
           <th>Action</th>
         </tr>
         {list.map((employee) => {
           return (
             <tr key={employee.id}>
               <td>{`${employee.firstName} ${employee.lastName}`}</td>
-              <td>{employee.email}</td>
+              <td>{employee.post}</td>
               <td>
                 <div>
                   <input

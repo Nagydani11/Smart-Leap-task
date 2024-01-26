@@ -24,9 +24,13 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
 
   return (
     <div>
+      <div>
+        <h1>Smart Leap application</h1>
+        <p>Please log in to continue. The username is admin, the password is admin1</p>
+      </div>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="username">Név:</label>
+          <label htmlFor="username">Name:</label>
           <input
             type="text"
             id="username"
@@ -36,7 +40,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
           />
         </div>
         <div>
-          <label htmlFor="password">Jelszó:</label>
+          <label htmlFor="password">Pass:</label>
           <input
             type="password"
             id="password"

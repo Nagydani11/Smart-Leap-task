@@ -2,7 +2,7 @@ export interface IEmployee {
   id: string;
   firstName: string;
   lastName: string;
-  email: string;
+  post: string;
 }
 
 export enum PageEnum {

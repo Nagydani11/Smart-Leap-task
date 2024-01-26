@@ -13,7 +13,7 @@ const EditEmployee = (props: Props) => {
 
   const [firstName, setFirstName] = useState(data.firstName);
   const [lastName, setLastName] = useState(data.lastName);
-  const [email, setEmail] = useState(data.email);
+  const [post, setPost] = useState(data.post); // Fix: Use the correct variable name
 
   const onFirstNameChangeHnd = (e: any) => {
     setFirstName(e.target.value);
@@ -23,8 +23,8 @@ const EditEmployee = (props: Props) => {
     setLastName(e.target.value);
   };
 
-  const onEmailChangeHnd = (e: any) => {
-    setEmail(e.target.value);
+  const onPostChangeHnd = (e: any) => {
+    setPost(e.target.value);
   };
 
   const onSubmitBtnClickHnd = (e: any) => {
@@ -33,7 +33,7 @@ const EditEmployee = (props: Props) => {
       id: data.id,
       firstName: firstName,
       lastName: lastName,
-      email: email,
+      post: post,
     };
     onUpdateClickHnd(updatedData);
     onBackBtnClickHnd();
@@ -42,7 +42,7 @@ const EditEmployee = (props: Props) => {
   return (
     <div className="form-container">
       <div>
-        <h3>Add Employee Form</h3>
+        <h3>Edit Blog Form</h3> {/* Fix: Change the heading */}
       </div>
       <form onSubmit={onSubmitBtnClickHnd}>
         <div>
@@ -58,12 +58,12 @@ const EditEmployee = (props: Props) => {
           <input type="text" value={lastName} onChange={onLastNameChangeHnd} />
         </div>
         <div>
-          <label>Email Add. : </label>
-          <input type="text" value={email} onChange={onEmailChangeHnd} />
+          <label>Post Add. : </label>
+          <input type="text" value={post} onChange={onPostChangeHnd} />
         </div>
         <div>
           <input type="button" value="Back" onClick={onBackBtnClickHnd} />
-          <input type="submit" value="Update Employee" />
+          <input type="submit" value="Update Post" />
         </div>
       </form>
     </div>
